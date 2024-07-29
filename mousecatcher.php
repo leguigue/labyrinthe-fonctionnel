@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 require_once '_db/dbconnect.php';
 $stmt = $conn->prepare("SELECT pseudo FROM user WHERE id = :id");
 $stmt->bindParam(':id', $_SESSION['user_id']);
